@@ -1,0 +1,13 @@
+{% extends 'home/index.html' %}
+{% load crispy_forms_tags  %}
+
+
+{% block body %}
+<div style = "margin:50px;">
+<form method = "POST">
+{% csrf_token %}
+{{ mine|crispy }}
+</div>
+<div> <button> submit </button></div>
+</form>
+{% endblock body %}
